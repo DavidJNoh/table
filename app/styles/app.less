@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    padding: 0;
+    outline: 0;
+    background-color: #e6e6e6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.crowdstrike {
+    text-align: center;
+}
+
+.outer-div {
+    padding:80px 200px;
+}
+
+.file-name {
+    min-width: 180px;
+    word-break: break-all;
+}
+
+.device-name {
+    min-width: 180px;
+    word-break: break-all;
+}
+
+.file-path {
+    // width: 100%;
+    word-break: break-all;
+}
+
+.file-status {
+    width: 100px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .file-name {
+        min-width: 100px;
+    }
+
+    .device-name {
+        min-width: 100px;
+    }
+
+    .file-status {
+        width: 100px;
+    }
+}
+
+@import "utilities.less";
+@import "data-table.less";

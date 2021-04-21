@@ -1,0 +1,33 @@
+<h1 class="crowdstrike">CrowdStrike</h1>
+<div class="outer-div">
+    <DataTable @class="box-margin-Axl" @content={{this.files}} as |Table|>
+        <Table.header as |Header|>
+            <Header.column class="file-name" @title="Name"/>
+            <Header.column class="device-name" @title="Device"/>
+            <Header.column class="path" @title="Path"/>
+            <Header.column/>
+            <Header.column @title="Status"/>
+        </Table.header>
+        <Table.body as |Body index|>
+            <Body.row as |Row|>
+                <Row.cell class="file-name" as |content|>
+                    {{content.name}}
+                </Row.cell>
+                <Row.cell class="device-name" as |content|>
+                    {{content.device}}
+                </Row.cell>
+                <Row.cell class="file-path" as |content|>
+                    {{content.path}}
+                </Row.cell>
+                <Row.cell as |content|>
+                    {{#if content.isAvailable}}
+                        <div class="green-circle"/>
+                    {{/if}}
+                </Row.cell>
+                <Row.cell class="file-status" as |content|>
+                    {{content.statusDisplay}}
+                </Row.cell>
+            </Body.row>
+        </Table.body>
+    </DataTable>
+</div>

@@ -1,0 +1,95 @@
+.data-table {
+    background-color: white;
+    font-weight: 500;
+    box-shadow: 0 0px 10px rgba(64,64,64,.7);
+    
+    .content-table {
+        border-spacing: 0;
+        border-radius: 8px;
+        border-collapse: collapse;
+        width: 100%;
+
+        .grey-row {
+            background-color: #cecece;
+            cursor: pointer;
+        }
+
+        .hover-row:hover {
+            background-color: #dfdfdf;
+        }
+
+        .checkbox {
+            width: 36px;
+        }
+
+        tbody td {
+            padding: 10px 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        thead td {
+            padding: 20px 8px 8px 8px;
+        }
+
+        tr:first-of-type {
+            td {
+                border-top: 1px solid #dddddd;
+            }
+        }
+
+        tr td{
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .green-circle {
+            border-radius:50%;
+            background-color: #81d232;
+            width:18px;
+            height:18px;
+        }
+    }
+    .utility-row {
+        font-size: 20px;
+    }
+
+    .indeterminate {
+        display: block;
+        width: 13px;
+        height: 13px;
+        background-color: #0075ff;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .indeterminate::after {
+        content: "";
+        position: absolute;
+        width: 7.3px;
+        height: 3px;
+        border-bottom: 2.5px solid #fff;
+        top: 35.3%;
+        left: 49.5%;
+        transform: translate(-50%, -50%);
+    }
+
+    .data-table__utility-checkbox {
+        padding-left: 14px;
+        padding-right: 3px;
+    }
+
+    .checkAllBox {
+        margin-left: 14px;
+    }
+
+    .download:hover {
+        cursor: pointer;
+    }
+
+    .select-counter {
+        width: 140px;
+    }
+}
+
+// Media query if there was extra time for responsibility since we are not using flexbox. Ideally I would use flex-box to make tables
+// but I chose traditional table for performance which I think is more important if I can put the extra work into make it mobile friendly

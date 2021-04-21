@@ -1,0 +1,19 @@
+<DataTable::Utility 
+    class="box-padding-Tlg utility-row"
+    @selectAll={{action "selectAll"}}
+    @downloadSelected={{action "downloadSelected"}}
+    @isSomeButNotAllSelected={{this.isSomeButNotAllSelected}} 
+    @selectedContentsCount={{this.selectedContentsCount}}
+    @fullySelected={{this.fullySelected}}/>
+<table data-element="data-table" class="content-table">
+    {{yield (hash 
+        header=(
+            component "data-table/header"
+        )
+        body=(
+            component "data-table/body"
+            content=this.content
+        )
+    )}}
+</table>
+

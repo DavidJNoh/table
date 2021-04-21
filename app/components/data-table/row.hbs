@@ -1,0 +1,9 @@
+<DataTable::Cell data-element="row-check-box-{{this.index}}" class="checkbox">
+    <input type="checkbox" checked={{this.checked}} onchange={{action "onChange"}}>
+</DataTable::Cell>
+{{yield (hash
+    cell=(
+        component "data-table/cell"
+        content=this.content
+    )
+)}}

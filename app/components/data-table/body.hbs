@@ -1,0 +1,9 @@
+{{#each this.content as |rowContent rowIndex|}}
+    {{yield (hash
+        row=(
+            component "data-table/row"
+            content=rowContent
+            index=rowIndex
+        )
+    )}}
+{{/each}}

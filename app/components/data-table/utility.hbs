@@ -1,0 +1,21 @@
+{{#if this.isSomeButNotAllSelected}}
+    <div class="data-table__utility-checkbox inline-block checkbox">
+        <input type="checkbox" id="check-all" hidden={{true}}>
+        <label data-element="check-all-indeterminate" {{on 'click' this.selectAll}} class="indeterminate" for="check-all"></label>
+    </div>
+{{else}}
+    <input data-element="check-all" class="checkAllBox" {{on 'click' this.selectAll}} type="checkbox" checked={{this.fullySelected}}>
+{{/if}}
+
+<div data-element="select-count" class="select-counter inline-block box-padding-Amd">
+    {{#if this.selectedContentsCount}}
+        Selected {{this.selectedContentsCount}}
+    {{else}}
+        None Selected
+    {{/if}}
+</div>
+
+<div data-element="download-selected-button" {{on 'click' this.downloadSelected}} class="download inline-block box-padding-Amd box-margin-Llg">
+    <i class="bi bi-download box-margin-Rmd"></i>
+    Download Selected
+</div>

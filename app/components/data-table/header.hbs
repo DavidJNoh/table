@@ -1,0 +1,9 @@
+<tr class="data-table__header-row">
+    {{!-- Empty checkbox area --}}
+    <DataTable::Column class="checkbox"/>
+    {{yield (hash 
+        column=(
+            component "data-table/column"
+        )
+    )}}
+</tr>
